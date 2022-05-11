@@ -1,0 +1,72 @@
+<app-breadcrumb [nombrepantalla]="'Actualizar Usuario'" [NombreInicioPantalla]="'Usuarios'"
+    [nombreAccion]="'Actualizar Usuarios'" [rutaInicioPantalla]="'/usuarios'">
+</app-breadcrumb>
+
+<div class="uk-section-small">
+    <div class="uk-container uk-container-large">
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+
+                <form class="uk-grid-small" uk-grid [formGroup]="formGroup" (ngSubmit)="save()">
+
+                    <div class="uk-width-1-2@s">
+                        <label class="uk-form-label" for="form-stacked-text">Nombre</label>
+                        <input class="uk-input" type="text" formControlName="nombre" />
+                    </div>
+                    <div class="uk-width-1-2@s">
+                        <label class="uk-form-label" for="form-stacked-text">Apellido</label>
+                        <input class="uk-input" type="text" formControlName="apellido" />
+                    </div>
+                    <div class="uk-width-1-2@s">
+                        <label class="uk-form-label" for="form-stacked-text">Telefono</label>
+                        <input class="uk-input" type="text" formControlName="telefono" />
+                    </div>
+                    <div class="uk-width-1-2@s">
+                        <label class="uk-form-label" for="form-stacked-text">Correo Personal</label>
+                        <input class="uk-input" type="text" formControlName="correoPersonal" />
+                    </div>
+                    <div class="uk-width-1-2@s">
+                        <label class="uk-form-label" for="form-stacked-text">Correo Corporativo</label>
+                        <input class="uk-input" type="text" formControlName="correoCorporativo" />
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label class="uk-form-label" for="form-stacked-text">Grupo</label>
+                        <select class="uk-select" formControlName="grupo">
+                            <option value="MEXICO">MEXICO</option>
+                            <option value="COLOMBIA">COLOMBIA</option>
+                            <option value="ECUADOR">ECUADOR</option>
+                        </select>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label class="uk-form-label" for="form-stacked-text">Rol</label>
+                        <select class="uk-select" formControlName="rol">
+                            <option value="Administrador">Administrador</option>
+                            <option value="Usuario">Usuario</option>
+                            <option value="Noticias">Noticias</option>
+                        </select>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label class="uk-form-label" for="form-stacked-text">Nombre Emergencia</label>
+                        <input class="uk-input" type="text" formControlName="nombreEmergencia" />
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label class="uk-form-label" for="form-stacked-text">Numero Emergencia</label>
+                        <input class="uk-input" type="text" formControlName="numeroEmergencia" />
+                    </div>
+
+
+                    <div class="uk-width-1-1@s uk-flex uk-flex-center">
+                        <button class="uk-button uk-button-primary submitbutton" type="submit"
+                            [disabled]="!formGroup.valid">
+                            Actualizar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

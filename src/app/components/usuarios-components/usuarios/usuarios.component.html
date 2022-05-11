@@ -1,0 +1,74 @@
+<app-breadcrumb [nombrepantalla]="'Usuarios'"></app-breadcrumb>
+
+<!-- Mensaje de no hay datos -->
+<div class="uk-section-small">
+    <div class="uk-container uk-container-large">
+        <div uk-alert>
+            <h2>No hay datos <i class="fas fa-table"></i></h2>
+        </div>
+    </div>
+</div>
+<!-- Mensaje de no hay datos -->
+
+
+<!-- Buscador -->
+<div class="uk-section-small">
+    <div class="uk-container uk-container-large">
+        <div uk-alert>
+            <div class="uk-navbar-left">
+                <div class="uk-search uk-search-navbar">
+                    <span uk-search-icon></span>
+                    <input class="uk-search-input" type="text" [(ngModel)]="term" placeholder="Buscar...">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Buscador -->
+
+
+<!-- tabla de resultados -->
+
+<div class="uk-section-small">
+    <div class="uk-container uk-container-large">
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <div class="uk-overflow-auto">
+                    <div class="uk-align-center uk-align-right@m uk-margin-remove-adjacent">
+                        <button routerLink="/usuarios-agregar" class="uk-button uk-button-primary">Agregar
+                            Usuario</button>
+                    </div>
+                    <table class="uk-table uk-table-small uk-table-divider">
+                        <thead>
+                            <tr>
+                                <th>Dirección</th>
+                                <th>Ciudad</th>
+                                <th>Departamento</th>
+                                <th>Nombre Cliente</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> prueba datos</td>
+                                <td>prueba datos</td>
+                                <td>prueba datos</td>
+                                <td>prueba datos</td>
+                                <td><button routerLink="/usuarios-editar/1"
+                                        class="uk-button uk-button-secondary">Editar</button></td>
+                                <td><button routerLink="/usuarios-eliminar/1"
+                                        class="uk-button uk-button-danger">Eliminar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="text-align: center;">
+                        <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Siguiente">
+                        </pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- tabla de resultados -->

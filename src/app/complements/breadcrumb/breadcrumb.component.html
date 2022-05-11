@@ -1,0 +1,11 @@
+<div class="uk-section-small uk-section-default header">
+    <div class="uk-container uk-container-large">
+        <h1><span class="ion-speedometer"></span> {{nombrepantalla}}</h1>
+        <ul class="uk-breadcrumb">
+            <li><a routerLink="">Inicio</a></li>
+            <li *ngIf="rutaInicioPantalla === ''"> <span>{{nombrepantalla}} </span></li>
+            <li *ngIf="rutaInicioPantalla != ''"><a routerLink="{{rutaInicioPantalla}}">{{NombreInicioPantalla}}</a></li>
+            <li *ngIf="nombreAccion != ''"><span>{{nombreAccion}}</span></li>
+        </ul>
+    </div>
+</div>

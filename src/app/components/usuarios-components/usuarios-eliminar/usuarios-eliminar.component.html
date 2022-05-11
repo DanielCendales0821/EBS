@@ -1,0 +1,17 @@
+<app-breadcrumb [nombrepantalla]="'Eliminar Usuarios'" [NombreInicioPantalla]="'Usuarios'"
+  [nombreAccion]="'Eliminar Usuario'" [rutaInicioPantalla]="'/usuarios'">
+</app-breadcrumb>
+
+<div class="uk-section-small">
+  <div class="uk-container uk-container-large">
+    <div class="uk-grid-small">
+      <div class="uk-card uk-card-default uk-card-body">
+        <p class="uk-text-large">Se eliminará el usuario de manera permanente</p>
+        <p uk-margin>
+          <button class="uk-button uk-button-default" routerLink="/usuarios">Cancelar</button>
+          <button class="uk-button uk-button-danger" (click)="eliminar()">Aceptar</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
